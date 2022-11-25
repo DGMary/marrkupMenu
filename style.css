@@ -1,0 +1,148 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: transparent;
+  color: #171f28;
+  font-size: 15px;
+  font-weight: 400;
+  overflow-x: hidden;
+  font-family: "Oxygen", Helvetica, Arial,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #363b46;
+  background-image: url(https://d36fr9tcqf0n5n.cloudfront.net/images/poly_background.png);
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  width: 180px;
+  margin: 10px 40px;
+}
+.header-logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.container {
+  padding: 0 15px;
+}
+
+/* style for menu */
+.header-nav,
+.header-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+}
+.header-nav__link {
+  color: #fff;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav a {
+  text-decoration: none;
+}
+.header-nav__item {
+  margin: 0 15px;
+  padding: 15px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header-nav__link {
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.header-nav__link i {
+  margin-left: 8px;
+}
+.header-nav__menu {
+  position: absolute;
+  top: 100%;
+  padding: 0;
+  background: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 2px 25px 0 rgb(0 0 0 / 15%);
+  /* visibility: hidden;
+  opacity: 0;  */
+  z-index: 455;
+  height: 0;
+  margin: 0;
+  width: 800px;
+  height: 390px;
+  min-height: 390px;
+}
+ul.header-nav__menu {
+  padding: 20px 0;
+}
+
+@media (min-width: 600px) {
+  .header-nav__item:hover .header-nav__menu {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.15s ease-in;
+  }
+}
+
+.header-nav .header-nav__menu-link {
+  color: #ce3c5c;
+}
+
+.header-nav__menu a {
+  display: inline-flex;
+  align-items: center;
+  width: 200px;
+  margin: 0;
+  padding: 8px 8px 8px 24px;
+  color: #3f444c;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: .3s ease-in-out;
+
+}
+.header-nav__menu a span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.header-nav__menu a:hover {
+  background-color: #f7f7f7;
+}
+.header-nav__menu a i {
+  margin-right: 8px;
+  height: 16px;
+}
+.header-nav__menu-subcategory {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 200px;
+  background: #fff;
+  height: 100%;
+  padding: 20px 0;
+}
+.header-nav__menu-subcategory > ul {
+  border-left: 1px solid #e0e0e0;
+}
+.subcategory-visible .header-nav__menu-subcategory {
+  z-index: 1;
+}
+
+.header-nav__menu-item:hover .header-nav__menu-subcategory{
+  z-index: 2;
+}
