@@ -6,6 +6,7 @@
   bottom: 0;
   width: 300px;
   background-color: #fff;
+  font-size: 14px;
 }
 .opened-burger .mobile-menu__holder {
   left: 0;
@@ -98,7 +99,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
 }
 
