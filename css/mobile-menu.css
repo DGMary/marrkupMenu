@@ -176,3 +176,15 @@
   transform: rotate(45deg);
   top: 6px;
 }
+
+.search-block .navbar-form {
+  margin: 15px;
+  width: 270px;
+}
+.search-block .navbar-form input[type="text"] {
+  width: 100%;
+  min-width: 270px;
+}
+.search-block .fi-br-search {
+  z-index: 1;
+}
