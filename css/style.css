@@ -1,6 +1,9 @@
 @import './mobile-menu.css';
 
-
+body {
+  min-height: 100vh;
+  height: 100%;
+}
 .header {
   background: #363b46;
   background-image: url(https://d36fr9tcqf0n5n.cloudfront.net/images/poly_background.png);
