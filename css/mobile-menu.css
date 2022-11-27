@@ -64,10 +64,10 @@
 .submenu-item__link span {
   display: inline-flex;
   padding: 15px;
-  width: calc(100% - 40px);
+  width: calc(100% - 50px);
 }
 .submenu-item__link > i {
-  width: 40px;
+  width: 50px;
   height: 100%;
   cursor: pointer;
   position: relative;
@@ -81,6 +81,25 @@
   padding: 15px;
   position: relative;
   background-color: rgba(30,39,50,0.02);
+}
+.back span {
+  display: inline-flex;
+  position: relative;
+  padding-left: 24px;
+}
+.back span:before {
+  content: "\f11b";
+  font-family: uicons-bold-rounded !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 

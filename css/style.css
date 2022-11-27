@@ -49,9 +49,6 @@ body {
   list-style: none;
   color: #fff;
 }
-.header-nav__link {
-  color: #fff;
-}
 .header-nav {
   display: flex;
   align-items: center;
@@ -61,17 +58,19 @@ body {
   text-decoration: none;
 }
 .header-nav__item {
-  margin: 0 15px;
-  padding: 15px 0;
+  padding: 10px 2px;
   position: relative;
   display: flex;
   align-items: center;
 }
 .header-nav__link {
   display: inline-flex;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.6;
+  color: #fff;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in;
 }
 .header-nav__link i {
   margin-left: 8px;
@@ -96,12 +95,17 @@ ul.header-nav__menu {
   padding: 20px 0;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
   .header-nav__item:hover .header-nav__menu {
     visibility: visible;
     opacity: 1;
     height: auto;
-    transition: opacity 0.15s ease-in;
+    transition: opacity 0.2s ease-in;
+  }
+  .header-nav__item:hover .header-nav__link  {
+    background-color: #f7f7f7;
+    color: rgba(30,39,50,0.8);
+    border-radius: 2px;
   }
 }
 
