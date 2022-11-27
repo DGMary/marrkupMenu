@@ -1,8 +1,10 @@
+@import './mobile-menu.css';
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: 0;
 }
 
 body {
@@ -28,12 +30,16 @@ body {
 }
 .header-logo img {
   display: block;
+  height: 30px;
   max-width: 100%;
   max-height: 100%;
 }
 .container {
   padding: 0 15px;
 }
+
+
+
 
 /* style for menu */
 .header-nav,
@@ -49,6 +55,7 @@ body {
 .header-nav {
   display: flex;
   align-items: center;
+  display: none;
 }
 .header-nav a {
   text-decoration: none;
@@ -76,12 +83,12 @@ body {
   background: #FFFFFF;
   border-radius: 4px;
   box-shadow: 0 2px 25px 0 rgb(0 0 0 / 15%);
-  /* visibility: hidden;
-  opacity: 0;  */
+  visibility: hidden;
+  opacity: 0; 
   z-index: 455;
   height: 0;
   margin: 0;
-  width: 800px;
+  width: 1000px;
   height: 390px;
   min-height: 390px;
 }
@@ -105,7 +112,7 @@ ul.header-nav__menu {
 .header-nav__menu a {
   display: inline-flex;
   align-items: center;
-  width: 200px;
+  width: 250px;
   margin: 0;
   padding: 8px 8px 8px 24px;
   color: #3f444c;
@@ -131,7 +138,7 @@ ul.header-nav__menu {
   position: absolute;
   display: flex;
   top: 0;
-  left: 200px;
+  left: 250px;
   background: #fff;
   height: 100%;
   padding: 20px 0;
@@ -145,4 +152,16 @@ ul.header-nav__menu {
 
 .header-nav__menu-item:hover .header-nav__menu-subcategory{
   z-index: 2;
+}
+.header-nav__menu--hidden {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+/* media */
+@media(min-width: 1200px) {
+  .header-nav {
+    display: flex;
+  }
+  
 }
