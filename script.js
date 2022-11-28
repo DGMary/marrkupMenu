@@ -20,7 +20,7 @@ function mobileSubmenu() {
 
 function toggleMenu() {
   $(document).on('click', '.burger-button', function(){
-    $( ".header" ).toggleClass( "opened-burger" );
+    $( "body" ).toggleClass( "opened-burger" );
     $('.submenu.active').removeClass('active')
   })
 }
