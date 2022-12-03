@@ -19,8 +19,17 @@ function mobileSubmenu() {
 
 
 function toggleMenu() {
+  let $body = $('body'), $bg = $('#bg-layout');
+
   $(document).on('click', '.burger-button', function(){
-    $( "body" ).toggleClass( "opened-burger" );
-    $('.submenu.active').removeClass('active')
+    $body.toggleClass("opened-burger");
+    $('.submenu.active').removeClass('active');
+    $bg.toggleClass( "active" );
   })
+
+  $(document).on("click", "#bg-layout.active", function () {
+    $body.removeClass("opened-burger");
+    $(this).removeClass("active");
+    $('.submenu.active').removeClass('active');
+  });
 }
