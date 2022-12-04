@@ -142,6 +142,7 @@
   height: 32px;
   cursor: pointer;
   border: 4px solid transparent;
+  z-index: 15;
 }
 
 .burger-button span {

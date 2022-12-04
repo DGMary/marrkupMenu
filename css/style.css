@@ -209,6 +209,9 @@ ul.header-nav__menu {
   width: 24px;
   height: 24px;
 }
+.back-to-top i:before {
+  margin: 0;
+}
 
 
 
