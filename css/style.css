@@ -50,7 +50,7 @@ header {
   text-decoration: none;
 }
 .header-nav__item {
-  padding: 10px 2px;
+  padding: 8px 2px;
   position: relative;
   display: flex;
   align-items: center;
@@ -208,4 +208,32 @@ ul.header-nav__menu {
   line-height: 24px;
   width: 24px;
   height: 24px;
+}
+
+
+
+/* style for product-page with btns */
+@media(min-width: 1200px) {
+
+  .btns-block-holder {
+    background: #fff;
+    padding-top: 10px;
+  }
+
+  .btns-block-holder .checkout-button {
+    margin-bottom: 0;
+  }
+
+  .btns-block.fixed {
+    height: 117px;
+  }
+
+  .btns-block.fixed .btns-block-holder {
+    position: fixed;
+    top: 58px;
+    right: 30px;
+    width: calc(25% - 40px);
+  }
+
+
 }

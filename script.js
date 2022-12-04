@@ -19,6 +19,9 @@ $(document).ready(function () {
     return false;
   });
 
+  // btns-fixed
+  $('.btns-block').length && fixedBtns();
+
 })
 
 function mobileSubmenu() {
@@ -50,4 +53,22 @@ function toggleMenu() {
     $(this).removeClass("active");
     $('.submenu.active').removeClass('active');
   });
+}
+
+
+function fixedBtns() {
+  const fixedBlock = $('.btns-block'),
+        heightPanel = $('.btns-block').outerHeight(),
+        topPos = $('.btns-block').offset().top - heightPanel + 58,
+        heightRowWithBtns = $('.row-with-btns').outerHeight() - 70;
+
+
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > topPos && $(document).scrollTop() < heightRowWithBtns) {
+      fixedBlock.addClass("fixed");
+    } else {
+      fixedBlock.removeClass("fixed");
+    }
+  });
+
 }
