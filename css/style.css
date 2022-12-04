@@ -213,8 +213,7 @@ ul.header-nav__menu {
 
 
 /* style for product-page with btns */
-@media(min-width: 1200px) {
-
+@media(min-width: 992px) {
   .btns-block-holder {
     background: #fff;
     padding-top: 10px;
@@ -230,10 +229,13 @@ ul.header-nav__menu {
 
   .btns-block.fixed .btns-block-holder {
     position: fixed;
-    top: 58px;
+    top: 56px;
     right: 30px;
     width: calc(25% - 40px);
   }
-
-
+}
+@media(min-width: 1200px) {
+  .btns-block.fixed .btns-block-holder {
+    top: 58px;
+  }
 }
