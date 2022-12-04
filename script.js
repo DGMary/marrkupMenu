@@ -43,9 +43,15 @@ function toggleMenu() {
   let $body = $('body'), $bg = $('#bg-layout');
 
   $(document).on('click', '.burger-button', function(){
-    $body.toggleClass("opened-burger");
-    $('.submenu.active').removeClass('active');
-    $bg.toggleClass( "active" );
+    if($body.hasClass("opened-burger")) {
+      $body.removeClass("opened-burger");
+      $('.submenu.active').removeClass('active');
+      $bg.removeClass( "active" );
+    } else {
+      $body.addClass("opened-burger");
+      $('.submenu.active').addClass('active');
+      $bg.addClass( "active" );
+    }  
   })
 
   $(document).on("click", "#bg-layout.active", function () {

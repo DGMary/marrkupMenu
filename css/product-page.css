@@ -1,0 +1,27 @@
+/* style for product-page with btns */
+@media(min-width: 992px) {
+  .btns-block-holder {
+    background: #fff;
+    padding-top: 10px;
+  }
+
+  .btns-block-holder .checkout-button {
+    margin-bottom: 0;
+  }
+
+  .btns-block.fixed {
+    height: 117px;
+  }
+
+  .btns-block.fixed .btns-block-holder {
+    position: fixed;
+    top: 56px;
+    right: 30px;
+    width: calc(25% - 40px);
+  }
+}
+@media(min-width: 1200px) {
+  .btns-block.fixed .btns-block-holder {
+    top: 58px;
+  }
+}
