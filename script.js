@@ -1,6 +1,24 @@
 $(document).ready(function () {
   mobileSubmenu();
   toggleMenu();
+
+
+  /* scroll to top */
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 220) {
+      $('.back-to-top').fadeIn(500);
+    } else {
+      $('.back-to-top').fadeOut(500);
+    }
+  });
+  
+  // btn-up
+  $(document).on('click', '.back-to-top', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 500);
+    return false;
+  });
+
 })
 
 function mobileSubmenu() {
