@@ -19,10 +19,14 @@ $(document).ready(function () {
     return false;
   });
 
-  // btns-fixed
-  $('.btns-block').length && fixedBtns();
-
 })
+
+$(window)
+  .on("resize", function () {
+    $('.btns-block').length && fixedBtns();
+  })
+  .trigger("resize");
+
 
 function mobileSubmenu() {
 
@@ -64,13 +68,14 @@ function toggleMenu() {
 
 function fixedBtns() {
   const fixedBlock = $('.btns-block'),
-        heightPanel = $('.btns-block').outerHeight(),
+        heightPanel = $('.btns-block-holder').outerHeight(),
         topPos = $('.btns-block').offset().top - heightPanel + 58,
-        heightRowWithBtns = $('.row-with-btns').outerHeight() - 70;
+        heightRowWithBtns = $('.row-with-btns').outerHeight() + 50;
 
+  fixedBlock.css({"height": heightPanel});
 
   $(window).scroll(function () {
-    if ($(document).scrollTop() > topPos && $(document).scrollTop() < heightRowWithBtns) {
+    if ($(document).scrollTop() < heightRowWithBtns) {
       fixedBlock.addClass("fixed");
     } else {
       fixedBlock.removeClass("fixed");
