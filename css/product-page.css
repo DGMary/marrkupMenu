@@ -1,30 +1,60 @@
 /* style for product-page with btns */
-@media(min-width: 992px) {
-  .btns-block-holder {
-    background: #fff;
-    padding-top: 10px;
-    z-index: 11;
-    opacity: 0;
-    transition: all 0.3 linear;
-  }
-
-  .btns-block-holder .checkout-button {
-    margin-bottom: 0;
-  }
-  .btns-block.fixed .btns-block-holder {
-    position: fixed;
-    top: 56px;
-    right: 30px;
-    width: calc(25% - 36px);
-    opacity: 1;
-    transition: all 0.3 linear;
-  }
-  .btns-block-holder .c-payment-solutions {
-    padding-bottom: 10px;
+@media(max-width: 991px) {
+  .fixed-block {
+    display: none;
   }
 }
+
+@media(min-width: 992px) {
+  .fixed-block {
+    background: #fff;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: -200px;
+    padding: 16px;
+    transition: top 0.3s linear;
+    box-shadow: 0 10px 70px rgb(0 0 0 / 15%);
+  }
+
+  .fixed-block.fixed {
+    top: 56px;
+    transition: top 0.5s linear;
+    z-index: 22;
+  }  
+  
+  .fixed-block__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .fixed-block__inner .checkout-btns {
+    display: flex;
+    align-items: center;
+  }
+
+  .fixed-block__inner .btn-block + .btn-block {
+    margin: 0;
+    padding: 14px 16px;
+  }
+
+  .fixed-block__inner .m-b-small {
+    margin-bottom: 0;
+  }
+
+  .fixed-block__inner .m-t-small {
+    margin-top: 2px;
+  }
+
+  .fixed-block__inner #currentPrice {
+    font-size: 32px;
+  }
+
+}
 @media(min-width: 1200px) {
-  .btns-block.fixed .btns-block-holder {
+  .fixed-block.fixed {
     top: 58px;
   }
 }

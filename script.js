@@ -23,7 +23,7 @@ $(document).ready(function () {
 
 $(window)
   .on("resize", function () {
-    $('.btns-block').length && fixedBtns();
+    $('.fixed-block').length && fixedBtns();
   })
   .trigger("resize");
 
@@ -67,15 +67,11 @@ function toggleMenu() {
 
 
 function fixedBtns() {
-  const fixedBlock = $('.btns-block'),
-        heightPanel = $('.btns-block-holder').outerHeight(),
-        topPos = $('.btns-block').offset().top - heightPanel + 58,
-        heightRowWithBtns = $('.row-with-btns').outerHeight() + 50;
-
-  fixedBlock.css({"height": heightPanel});
+  const fixedBlock = $('.fixed-block'),
+        heightPanel = $('.btns-holder').offset().top;
 
   $(window).scroll(function () {
-    if ($(document).scrollTop() < heightRowWithBtns) {
+    if ($(document).scrollTop() > heightPanel) {
       fixedBlock.addClass("fixed");
     } else {
       fixedBlock.removeClass("fixed");
