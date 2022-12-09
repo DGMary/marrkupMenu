@@ -32,12 +32,12 @@ function mobileSubmenu() {
 
   $(document).on("click", ".js-back", function (e) {
     e.preventDefault();
-    $(this).parent(".submenu.active").removeClass("active");
+    $(this).closest(".submenu.active").removeClass("active");
   });
 
   $(document).on("click", ".js-forward", function (e) {
     e.preventDefault();
-    $(this).parent(".submenu-item__link").siblings(".submenu").addClass("active");
+    $(this).siblings(".submenu").addClass("active");
   });
 
 }
