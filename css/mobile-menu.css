@@ -45,7 +45,6 @@
   bottom: 0;
   left: -310px;
   background: #fff;
-  height: 100%;
   overflow: auto;
   z-index: 1;
   -webkit-transition: left .5s;
